@@ -1,5 +1,5 @@
 context:
-  version: "1.2.5"
+  version: "1.2.6"
 
 package:
   name: orbit-nrel
@@ -7,8 +7,8 @@ package:
 
 
 source:
-- url: https://pypi.org/packages/source/o/orbit-nrel/orbit_nrel-${{ version }}.tar.gz
-  sha256: 0e572e97068df32a47a8fa4a875ccaf74c3cea3bde64074d4cc156720748fde8
+  - url: https://pypi.org/packages/source/o/orbit-nrel/orbit_nrel-${{ version }}.tar.gz
+    sha256: 9d8b426107ac6d2c54b61da398f35862b4fc49632fe5145aa41fdf1859551840
 
 build:
   number: 0
@@ -17,31 +17,31 @@ build:
 
 requirements:
   host:
-  - python ${{ python_min }}.*
-  - setuptools
-  - setuptools-scm
-  - pip
+    - python ${{ python_min }}.*
+    - setuptools
+    - setuptools-scm
+    - pip
   run:
-  - python >=${{ python_min }}
-  - numpy
-  - simpy
-  - marmot-agents >=0.2.5
-  - scipy
-  - pandas
-  - pyyaml
-  - python-benedict
-  - statsmodels
+    - python >=${{ python_min }}
+    - numpy
+    - simpy
+    - marmot-agents >=0.2.5
+    - scipy
+    - pandas
+    - pyyaml
+    - python-benedict
+    - statsmodels
 
 tests:
-- script:
-    - pytest -n auto -vvv
-  requirements:
+  - script:
+      - pytest -n auto -vvv
+    requirements:
       run:
-        - pytest  
-        - pytest-cov  
+        - pytest
+        - pytest-cov
         - pytest-xdist
         - python ${{ python_min }}.*
-  files:
+    files:
       source:
         - .
 
@@ -55,4 +55,3 @@ about:
 extra:
   recipe-maintainers:
     - julian-belina
-    
