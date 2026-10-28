@@ -31,7 +31,7 @@ requirements:
     - pyyaml
     - python-benedict
     - statsmodels
-    - matplotlib
+    - matplotlib-base
 
 tests:
   - script:
@@ -47,7 +47,9 @@ tests:
         - .
 
 about:
-  homepage: https://github.com/WISDEM/ORBIT
+  homepage: https://github.com/NLRWindSystems/ORBIT
+  repository: https://github.com/NLRWindSystems/ORBIT
+  documentation: https://nlrwindsystems.github.io/ORBIT/
   summary: Offshore Renewables Balance of system and Installation Tool
 
   license: Apache-2.0
